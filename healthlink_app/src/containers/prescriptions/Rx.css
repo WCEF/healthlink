@@ -15,3 +15,10 @@
 .fa-pill:before {
   content: "\f205";
 }
+.rxList h4 {
+}
+.rxList img.pill-bottle {
+  height: 48px;
+  width: 48px;
+  /* margin-top: -15px; */
+}

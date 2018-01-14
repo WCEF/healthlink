@@ -7,7 +7,12 @@ import PharmacySelect from '../pharmacies/PharmacySelect';
 const Rx = ({ rx, doctor, pharmacy, stepNumber, confirmDelivery }) => (
   <div className={`panel ${stepNumber === 4 ? 'panel-success' : 'panel-default'}`}>
     <div className="panel-heading">
-      <h4>{rx.name}<small> - Prescribed by Dr. {doctor.name}. { pharmacy && stepNumber >= 2 ? ` Filled by ${pharmacy.name}.` : 'test'}</small></h4>
+      <div className="row">
+        <div className="col-xs-2">
+          <img src="https://imgur.com/3LL2TY1.png" className="pill-bottle"></img>
+        </div>
+        <h4 className="col-xs-10">{rx.name}<small> - Prescribed by Dr. {doctor.name}. { pharmacy && stepNumber >= 2 ? ` Filled by ${pharmacy.name}.` : 'test'}</small></h4>
+      </div>
     </div>
     <div className={`panel-body `}>
       <div className="progress">
