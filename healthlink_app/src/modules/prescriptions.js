@@ -19,16 +19,16 @@ const byId = {
     isOrdering: false,
   },
   "2": {
-    name: "2nd Drug thing",
+    name: "Modafinil",
     id: "2",
     status: "ordered",
     patientId: "1",
     doctorId: "1",
-    pharmacyId: null,
+    pharmacyId: "1",
     isOrdering: false,
   },
   "3": {
-    name: "Anti Cough Juice",
+    name: "Aldactone",
     id: "3",
     status: "open",
     patientId: "1",
@@ -42,7 +42,7 @@ const byId = {
     status: "filled",
     patientId: "1",
     doctorId: "1",
-    pharmacyId: null,
+    pharmacyId: "2",
     isOrdering: false,
   },
 }

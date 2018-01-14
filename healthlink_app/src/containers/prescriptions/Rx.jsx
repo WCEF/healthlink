@@ -4,10 +4,10 @@ import { confirmDelivery } from '../../modules/prescriptions';
 
 import PharmacySelect from '../pharmacies/PharmacySelect';
 
-const Rx = ({ rx, doctor, stepNumber, confirmDelivery }) => (
+const Rx = ({ rx, doctor, pharmacy, stepNumber, confirmDelivery }) => (
   <div className={`panel ${stepNumber === 4 ? 'panel-success' : 'panel-default'}`}>
     <div className="panel-heading">
-      <h4>{rx.name}<small> - Prescribed by Dr. {doctor.name}</small></h4>
+      <h4>{rx.name}<small> - Prescribed by Dr. {doctor.name}. { pharmacy && stepNumber >= 2 ? ` Filled by ${pharmacy.name}.` : 'test'}</small></h4>
     </div>
     <div className={`panel-body `}>
       <div className="progress">
@@ -33,6 +33,7 @@ export default connect(
     return {
       rx,
       doctor: state.doctors.byId[rx.doctorId],
+      pharmacy: state.pharmacies.byId[rx.pharmacyId],
       stepNumber: steps[rx.status],
     };
   },
