@@ -1,6 +1,10 @@
 form.pharmacy > .btn {
   margin-left: 1rem;
+  margin-bottom: 5px;
 }
 form.pharmacy {
   vertical-align: middle;
+}
+form select {
+  margin-bottom: 5px;
 }
