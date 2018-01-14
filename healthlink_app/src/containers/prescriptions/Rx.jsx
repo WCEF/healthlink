@@ -26,6 +26,9 @@ const Rx = ({ rx, doctor, pharmacy, stepNumber, confirmDelivery }) => (
       {/* stepNumber === 1 ? <span className="label label-warning">User Action Required</span> : '' */}
       <PharmacySelect rxId={rx.id} stepNumber={stepNumber} />
       <button style={{ display: stepNumber === 3 ? '' : 'none' }} className="btn btn-success" onClick={() => confirmDelivery(rx.id)}>Confirm Delivery</button>
+      <div className="alert alert-success alert-dismissable text-center" style={{ display: stepNumber === 4 ? '' : 'none' }} role="alert">
+        You've confirmed reciept of this medication.
+      </div>
     </div>
 
   </div>

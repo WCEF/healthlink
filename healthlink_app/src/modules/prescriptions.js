@@ -45,6 +45,15 @@ const byId = {
     pharmacyId: "2",
     isOrdering: false,
   },
+  "5": {
+    name: "Focalin XR",
+    id: "5",
+    status: "filled",
+    patientId: "1",
+    doctorId: "1",
+    pharmacyId: "1",
+    isOrdering: false,
+  },
 }
 
 const filterReducer = (state = null, action) => {
@@ -56,7 +65,7 @@ const filterReducer = (state = null, action) => {
   }
 }
 
-const allIdsReducer = (state = ["1", "2", "3", "4"], action) => {
+const allIdsReducer = (state = ["1", "2", "3", "4", "5"], action) => {
   switch (action.type) {
     default:
       return state;
